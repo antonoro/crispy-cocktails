@@ -38,6 +38,15 @@ function MongoUtils(){
                 .finally(() => client.close());
         });
 
+   
+
+    il.search = query => il.connect().then(client =>
+        {
+            const ingredientsCol = client.db(dbName).collection(colNameIngredients);
+            return  ingredientsCol.find({IngredientName: query}).toArray();
+        
+        });
+
     return il;
 }
 
