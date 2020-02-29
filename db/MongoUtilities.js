@@ -12,14 +12,14 @@ function MongoUtils(){
         
 
     il.connect = () => {
-        client = new MongoClient('mongodb://${hostname}:${port}', {useUnifiedTopology: true});
+        client = new MongoClient(`mongodb://${hostname}:${port}`, {useUnifiedTopology: true});
         return client.connect();
     }
 
-    rl.connect = () => {
-        client = new MongoClient('mongodb://${hostname}:${port}');
-        return client.connect();
-    }
+    // rl.connect = () => {
+    //     client = new MongoClient('mongodb://${hostname}:${port}');
+    //     return client.connect();
+    // }
     
     il.find = query => il.connect().then(client => 
     {
