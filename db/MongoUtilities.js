@@ -30,6 +30,14 @@ function MongoUtils(){
             .finally(() => client.close());
     });
 
+    il.insert = ingredient => il.connect().then(client => 
+        {
+            const ingredientsCol = client.db(dbName).collection(colNameIngredients);
+            return ingredientsCol
+                .insertOne(ingredient)
+                .finally(() => client.close());
+        });
+
     return il;
 }
 
