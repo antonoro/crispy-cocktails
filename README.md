@@ -35,5 +35,5 @@ Link to the project web page: [ADD LINK]
 
 ## 5: Licence
 
-This project is licensed under the terms of the MIT License.
+This project is licensed under the terms of the MIT <a href="https://github.com/antonoro/crispy-cocktails/blob/master/LICENSE">License</a>.
 
