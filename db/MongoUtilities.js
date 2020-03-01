@@ -26,6 +26,7 @@ function MongoUtils(){
         const ingredientsCol = client.db(dbName).collection(colNameIngredients);
         return ingredientsCol
             .find(query)
+            .sort({IngredientName: +1})
             .toArray()
             .finally(() => client.close());
     });

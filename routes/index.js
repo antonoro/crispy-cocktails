@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
   //update ingredients list with database content
   mu.find()
     .then(ingredients => 
-      res.render('index', { title: 'Crispy Cocktails', ingredientsinBar: ingredients, nameSearched: "", quantitySearched: ""})
+      res.render('index', { title: 'Crispy Cocktails', ingredientsinBar: ingredients, nameSearched: "N/A", quantitySearched: "N/A"})
       );
 });
 

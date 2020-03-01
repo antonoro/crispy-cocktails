@@ -32,61 +32,46 @@
         </div>
 
         <div class="col-12 col-md-4">
-          <%- include("./addIngredient_form.ejs") %>
-        </div>
-
-      </div>
-
-      <div class="row">
-        <div class="col-12 col-md-4">
-        </div>
-        <div class="col-12 col-md-4">
-        </div>  
-        <div class="col-12 col-md-4">
-          <form action="/ingredients/search" method="GET">
-            <div>
+          <div class="row">
+            <%- include("./addIngredient_form.ejs") %>
+          </div>
+          <div class="row">
+            <form action="/ingredients/search" method="GET">
                 <div class="form-group">
-                    <label class="row">
-                        <h2>Search Ingredient</h2>
-                    </label>
+                  <label class="row">
+                      <h2>Search Quantity</h2>
+                  </label>
                 </div>
                 <div class="form-group">
                     <label class="row">
-                        <div class="col-sm-2">
-                            <span>Name:</span>
+                        <div class="col-7 col-sm-4">
+                            <span>Ingredient:</span>
                         </div>
-                        <div class="col-sm-3">
-                            <input class="form_control input-sm" type="text" name="IngredientName" required>
+                        <div class="col-sm-2">
+                            <input class="form_control input-xs" type="text" name="IngredientName" required>
                             
                         </div>
                     </label>
                 </div>
-        
+          
                 <div class="form-group">
                     <label class="row">
-                        <div class="col-sm-2">
-                            <span>Result:</span>
-                        </div>
-                        <div class="col-sm-7">
-                         <output><%= nameSearched %> : <%= quantitySearched %></output>
-                        </div>
                         <div class="col-sm-3">
-                            <span>(oz.)</span>
+                            <span>Quantity:</span>
+                        </div>
+                        <div class="col-sm-9">
+                          <output><%= nameSearched %> : <%= quantitySearched %> (oz.)</output>
                         </div>
                     </label>
                 </div>
-        
+          
                 <div class="form-group">
-                    <button class="btn btn-primary" type="submit">Search Ingredient</button>
+                  <button class="btn btn-primary" type="submit">Search Ingredient</button>
                 </div>
-            </div>
-        </form>
-        </div>    
-
-
+            </form>  
+          </div>
+        </div>
       </div>
-      
-      
     </div>
     
     <script src="javascripts/searchIngredient.js"></script>
